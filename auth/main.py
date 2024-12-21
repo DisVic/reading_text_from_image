@@ -80,11 +80,6 @@ async def get_user(user: _schemas.User = _fastapi.Depends(_services.get_current_
     return user
 
 
-@app.get("/api/users/profile", tags=['User Auth'])
-async def get_user(email: str, db: _orm.Session = _fastapi.Depends(_services.get_db)):
-    return db.query(_models.User and _models.Address).filter_by(id=1).first()
-  
-
 @app.post("/api/users/generate_otp", response_model=str, tags=["User Auth"])
 async def send_otp_mail(userdata: _schemas.GenerateOtp, db: _orm.Session = _fastapi.Depends(_services.get_db)):
     user = await _services.get_user_by_email(email=userdata.email, db=db)
