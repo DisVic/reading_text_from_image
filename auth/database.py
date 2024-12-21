@@ -7,14 +7,6 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-
-# Retrieve environment variables
-# postgres_host = os.environ.get("POSTGRES_HOST")
-# postgres_db = os.environ.get("POSTGRES_DB")
-# postgres_user = os.environ.get("POSTGRES_USER")
-# postgres_password = os.environ.get("POSTGRES_PASSWORD")
-
-
 # Assuming your PostgreSQL server is running locally with a database named 'mydatabase'
 DATABASE_URL = "postgresql://postgres:v1ctoryAppearance@localhost/project"
 
