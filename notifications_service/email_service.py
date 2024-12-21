@@ -18,7 +18,7 @@ def notification(message):
         sender_password = os.environ.get("MAIL_PASSWORD")
         
 
-        # Gmail SMTP server settings
+        # mail SMTP server settings
         smtp_server = 'smtp.yandex.ru'
         smtp_port = 587
 
